@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+  产品：优雅草HTML编辑器(yeditor)
+  作者：卓伊凡
+  关联企业：成都市一颗优雅草科技有限公司
+  页面属性：api.html - 技术接口文档
+  时间：2026
+  关联企业官网：www.youyacao.com
+  正版源码获取途径：zhengban.youyacao.com
+  公司介绍：优雅草科技，立足蓉城，虽规模不广，却志存高远。团队精干，成员寡而不弱，各司其职，皆能独当一面。其所重者，不在虚名与浮华，而在结构之严谨、技术之深厚与执行之迅捷。凡项目立项，必由核心亲为；凡产品迭代，皆循长期主义之道。外观简朴而内核坚实，规模虽小而战力甚强。于纷繁市场之中，不逐流，不逐势，惟以认知为刃，以代码为基，审时度势，稳中求进。所谓"小而美"，非徒形容之辞，实乃精兵强将之象；所谓"战斗力强"，非喧哗之言，乃厚积薄发之证。优雅草，行稳而致远，静水而深流。
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="yeditor 技术接口文档 - 各语言与框架接入说明">
+  <title>技术接口文档 - 优雅草 HTML 编辑器 (yeditor)</title>
+  <style>
+    :root {
+      --ye-primary: #2d6a4f;
+      --ye-bg: #f8faf8;
+      --ye-card: #fff;
+      --ye-text: #1a1a1a;
+      --ye-muted: #5c6b5c;
+      --ye-border: #e2e8e0;
+      --ye-font: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--ye-font); background: var(--ye-bg); color: var(--ye-text); line-height: 1.7; }
+    .top-bar {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .top-bar a { color: #fff; text-decoration: none; opacity: 0.9; }
+    .top-bar a:hover { opacity: 1; text-decoration: underline; }
+    .container { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--ye-primary); }
+    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--ye-border); }
+    h3 { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; }
+    p { margin: 0.5rem 0; color: var(--ye-muted); }
+    pre, code { font-family: "Consolas", "Monaco", "Courier New", monospace; font-size: 0.9em; }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 0.75rem 0;
+      line-height: 1.5;
+    }
+    code { background: #e8ece8; padding: 0.15em 0.4em; border-radius: 4px; color: #333; }
+    pre code { background: none; padding: 0; color: inherit; }
+    ul { margin: 0.5rem 0 0.5rem 1.25rem; color: var(--ye-muted); }
+    .card { background: var(--ye-card); border-radius: 10px; padding: 1.25rem; margin: 1rem 0; border: 1px solid var(--ye-border); }
+    .card h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--ye-border); padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #f1f5f1; color: var(--ye-text); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="top-bar">
+    <a href="index.html">首页</a>
+    <a href="api.html">技术接口文档</a>
+    <a href="about.html">关于 yeditor</a>
+    <a href="https://gitee.com/youyacao/yeditor" target="_blank" rel="noopener">Gitee 开源</a>
+  </nav>
+
+  <div class="container">
+    <h1>yeditor 技术接口文档</h1>
+    <p>本文档说明如何将优雅草 HTML 编辑器 (yeditor) 接入到各类开发语言与框架中。yeditor 为纯前端脚本，仅需在页面中引入 <code>yeditor.js</code> 与 <code>yeditor.css</code>，在目标容器上实例化即可。</p>
+
+    <div class="card">
+      <h2>一、基础引入（原生 HTML / 任意后端）</h2>
+      <p>将 <code>src/yeditor.js</code> 与 <code>src/yeditor.css</code> 拷贝到项目中，在页面中引入并初始化。</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="path/to/yeditor.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="editor"&gt;&lt;/div&gt;
+  &lt;script src="path/to/yeditor.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    var editor = new YEditor('#editor', {
+      placeholder: '在此输入…',
+      minHeight: 200,
+      maxHeight: 500,
+      toolbar: ['fontSize','fontColor','|','bold','italic','underline','|','alignLeft','alignCenter','alignRight','alignJustify','|','h2','h3','|','ul','ol','|','link','image','images','|','code','source']
+    });
+    var html = editor.getHTML();
+    editor.setHTML('&lt;p&gt;初始内容&lt;/p&gt;');
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>二、配置项 (options)</h2>
+      <table>
+        <thead>
+          <tr><th>参数</th><th>类型</th><th>默认值</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>placeholder</td><td>string</td><td>在此输入内容…</td><td>占位提示文字</td></tr>
+          <tr><td>minHeight</td><td>number</td><td>200</td><td>编辑器最小高度(px)</td></tr>
+          <tr><td>maxHeight</td><td>number</td><td>500</td><td>编辑器最大高度(px)</td></tr>
+          <tr><td>toolbar</td><td>array</td><td>见下方</td><td>工具栏项，'|' 表示分隔线</td></tr>
+        </tbody>
+      </table>
+      <p><strong>toolbar 可选值：</strong> fontSize, fontColor, bold, italic, underline, alignLeft, alignCenter, alignRight, alignJustify, h2, h3, ul, ol, link, image, images, code, source</p>
+    </div>
+
+    <div class="card">
+      <h2>三、实例方法 (API)</h2>
+      <table>
+        <thead>
+          <tr><th>方法</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>getHTML()</td><td>获取编辑器当前 HTML 字符串</td></tr>
+          <tr><td>setHTML(html)</td><td>设置编辑器 HTML 内容</td></tr>
+          <tr><td>getText()</td><td>获取纯文本内容</td></tr>
+          <tr><td>focus()</td><td>使编辑器获得焦点</td></tr>
+          <tr><td>destroy()</td><td>销毁编辑器实例</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>四、Vue 2 / Vue 3 接入</h2>
+      <p>在 <code>mounted</code>（Vue 2）或 <code>onMounted</code>（Vue 3）中创建实例，在 <code>beforeUnmount</code> / <code>onBeforeUnmount</code> 中销毁。</p>
+      <pre><code>// 1. 在 main.js 或入口中全局引入（或仅在使用的组件内引入）
+import 'path/to/yeditor.css';
+import 'path/to/yeditor.js';
+
+// 2. 组件内
+export default {
+  data() { return { editor: null }; },
+  mounted() {
+    this.editor = new window.YEditor(this.$refs.editorHost, {
+      placeholder: '请输入内容',
+      minHeight: 200,
+      toolbar: ['fontSize','fontColor','|','bold','italic','underline','|','alignLeft','alignCenter','alignRight','|','h2','h3','|','ul','ol','|','link','image','images','|','code','source']
+    });
+  },
+  beforeUnmount() {
+    if (this.editor) this.editor.destroy();
+  }
+};
+
+// 模板
+// &lt;div ref="editorHost"&gt;&lt;/div&gt;</code></pre>
+      <p>Vue 3 Composition API 示例：</p>
+      <pre><code>import { ref, onMounted, onBeforeUnmount } from 'vue';
+import 'path/to/yeditor.css';
+import 'path/to/yeditor.js';
+
+const editorHost = ref(null);
+let editor = null;
+onMounted(() => {
+  editor = new window.YEditor(editorHost.value, { placeholder: '请输入内容', minHeight: 200 });
+});
+onBeforeUnmount(() => { if (editor) editor.destroy(); });
+
+// 获取内容：editor.getHTML()</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>五、React 接入</h2>
+      <p>使用 <code>useRef</code> 挂载容器，在 <code>useEffect</code> 中创建与销毁实例。</p>
+      <pre><code>import { useRef, useEffect } from 'react';
+import 'path/to/yeditor.css';
+import 'path/to/yeditor.js';
+
+function Editor() {
+  const hostRef = useRef(null);
+  const editorRef = useRef(null);
+
+  useEffect(() => {
+    if (!hostRef.current) return;
+    editorRef.current = new window.YEditor(hostRef.current, {
+      placeholder: '请输入内容',
+      minHeight: 200,
+      toolbar: ['fontSize','fontColor','|','bold','italic','underline','|','alignLeft','alignCenter','alignRight','|','h2','h3','|','ul','ol','|','link','image','images','|','code','source']
+    });
+    return () => {
+      if (editorRef.current) editorRef.current.destroy();
+    };
+  }, []);
+
+  const getContent = () => editorRef.current?.getHTML();
+  const setContent = (html) => editorRef.current?.setHTML(html);
+
+  return &lt;div ref={hostRef} /&gt;;
+}</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>六、jQuery / 传统 JS 接入</h2>
+      <pre><code>// 选择器传入
+var editor = new YEditor('#editor', { minHeight: 260 });
+
+// 或传入 DOM 元素
+var el = document.getElementById('editor');
+var editor = new YEditor(el, { placeholder: '在此输入' });
+
+var html = editor.getHTML();
+editor.setHTML('&lt;p&gt;预设内容&lt;/p&gt;');</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>七、PHP 等服务端渲染</h2>
+      <p>在服务端输出 HTML 时，将 yeditor 的 CSS/JS 路径指向项目内静态资源，在表单页中预留一个 <code>&lt;div id="content-editor"&gt;&lt;/div&gt;</code>，提交时通过隐藏域或 Ajax 提交 <code>editor.getHTML()</code> 的值即可。无需服务端特殊接口，与语言无关。</p>
+      <pre><code>&lt;!-- 例如 PHP 模板中 --&gt;
+&lt;div id="content-editor"&gt;&lt;/div&gt;
+&lt;input type="hidden" name="content" id="content-html"&gt;
+&lt;script src="/static/yeditor.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var editor = new YEditor('#content-editor', {});
+  document.querySelector('form').onsubmit = function() {
+    document.getElementById('content-html').value = editor.getHTML();
+  };
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>八、Angular 接入思路</h2>
+      <p>在 <code>angular.json</code> 的 <code>scripts</code> 与 <code>styles</code> 中引入 yeditor.js / yeditor.css，或在组件中动态加载。在组件的 <code>ngAfterViewInit</code> 中对 <code>ViewChild</code> 的容器调用 <code>new YEditor(containerRef.nativeElement, options)</code>，在 <code>ngOnDestroy</code> 中调用 <code>editor.destroy()</code>。</p>
+    </div>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem;">以上为 yeditor 接入各语言/框架的通用方式。编辑器仅依赖浏览器原生能力，无构建要求，任意能输出 HTML 并执行 JS 的环境均可使用。更多问题可至 <a href="https://gitee.com/youyacao/yeditor" target="_blank" rel="noopener">Gitee 仓库</a> 提 Issue。</p>
+  </div>
+</body>
+</html>

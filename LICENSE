@@ -1,0 +1,135 @@
+优雅草开源与商业授权协议（2026 年 2 月 17 日版）
+Youyacao Open Source and Commercial License (Version of 2026-02-17)
+
+版权所有人 / Copyright Holder：
+成都市一颗优雅草科技有限公司（以下简称「优雅草」/ "Youyacao"）
+Chengdu Yike Youyacao Technology Co., Ltd.
+
+发布日期 / Effective Date：2026 年 2 月 17 日 / February 17, 2026
+
+================================================================================
+一、总则 / GENERAL
+================================================================================
+
+1.1 优雅草自 2026 年 2 月 17 日起，对所有系列产品实行免费开源。本协议为优雅草开源与商业授权之最新版统一文本，适用于优雅草官方发布的所有开源产品（含官网、工具、系统及后续以本协议发布的全部软件与文档）。
+
+1.2 Youyacao has made all its product series available as free and open source as of February 17, 2026. This agreement is the current unified text for Youyacao open source and commercial licensing and applies to all officially released open-source products (including the official website, tools, systems, and any future software or documentation released under this agreement).
+
+1.3 授权查询与验证的唯一官方网站为：https://zhengban.youyacao.com （以下简称「授权官网」）。任何授权状态、授权类型、授权期限及转让记录均以该站公示及查询结果为准，其他任何渠道均不得作为授权依据。
+
+1.4 The sole official website for license verification and inquiry is: https://zhengban.youyacao.com (the "License Site"). Any license status, type, term, or transfer record is determined solely by the information published and queried on this site; no other channel may be used as proof of license.
+
+================================================================================
+二、个人非商业使用 / PERSONAL NON-COMMERCIAL USE
+================================================================================
+
+2.1 个人以非商业目的使用优雅草全部系列产品（包括但不限于学习、研究、个人项目、内部试用），均可免费使用，无需支付授权费用。
+
+2.2 Personal use of all Youyacao product series for non-commercial purposes (including but not limited to learning, research, personal projects, and internal trial) is free; no license fee is required.
+
+2.3 非商业使用仍须保留优雅草版权标识及协议指向（如源码或界面中的版权声明、本协议或授权官网链接），且不得移除或篡改授权验证相关说明。
+
+2.4 Non-commercial use must still retain Youyacao copyright notices and a reference to this agreement (e.g., in source code or UI), and must not remove or alter any license verification information.
+
+================================================================================
+三、商业使用与授权 / COMMERCIAL USE AND LICENSING
+================================================================================
+
+3.1 任何企业或个人将优雅草系列产品用于商业用途（包括但不限于销售、运营、对外提供服务、集成进商业产品、以营利为目的的二次开发或分发），必须事先获得优雅草商业授权。未获授权而进行商业使用视为侵权，须承担相应法律责任。
+
+3.2 Any enterprise or individual using Youyacao product series for commercial purposes (including but not limited to sale, operation, provision of services to third parties, integration into commercial products, or distribution for profit) must obtain a commercial license from Youyacao in advance. Commercial use without a license constitutes infringement and may result in legal liability.
+
+3.3 商业授权仅可通过优雅草官方渠道办理；授权状态与真伪以授权官网 https://zhengban.youyacao.com 的查询结果为准。
+
+3.3 Commercial licenses are only granted through official Youyacao channels; the validity and authenticity of a license are determined solely by the query result on the License Site https://zhengban.youyacao.com.
+
+================================================================================
+四、授权效力与期限 / LICENSE EFFECT AND DURATION
+================================================================================
+
+4.1 在您遵守本协议且已按要求取得商业授权（如涉及商业使用）的前提下，授权为永久有效。您享有在授权范围内的永久使用权，无需按年续费。
+
+4.1 Provided that you comply with this agreement and have obtained a commercial license where required (for commercial use), the license is perpetual. You enjoy permanent right of use within the licensed scope; no annual renewal fee is required.
+
+4.2 本协议所称「永久」指自授权生效之日起无固定期限，除非本协议或授权官网载明的特别条款另有规定，或您严重违反本协议导致授权被终止。
+
+4.2 "Perpetual" herein means from the effective date of the license there is no fixed term, unless otherwise provided in this agreement or in specific terms displayed on the License Site, or unless the license is terminated due to your material breach of this agreement.
+
+================================================================================
+五、授权范围内您享有的权利 / RIGHTS GRANTED UNDER THE LICENSE
+================================================================================
+
+在合法取得相应授权（非商业免费使用或商业授权）的前提下，您享有以下权利：
+
+Subject to your having obtained the corresponding license (free non-commercial use or commercial license), you are granted the following rights:
+
+5.1 使用权：在约定范围内安装、运行、使用优雅草产品，用于符合本协议及授权类型的用途。
+
+5.1 Right of use: To install, run, and use Youyacao products within the agreed scope for purposes consistent with this agreement and the type of license.
+
+5.2 二次开发权：在保留版权标识与授权说明的前提下，对获得授权的产品进行修改、定制、扩展与二次开发，用于自身业务或已获授权的商业用途，且不构成下述「衍生子版本售卖」行为。
+
+5.2 Right of secondary development: To modify, customize, extend, and make derivative works of the licensed product for your own business or for licensed commercial use, while retaining copyright and license notices and without engaging in the "derivative sub-version sale" described below.
+
+5.3 转让授权权：在商业授权有效期内，您可将本协议项下您所享有的使用权、二次开发权等授权权益整体转让给符合优雅草规定的受让主体。转让时，受让方须就本次转让向优雅草支付相当于当时标准商业授权费一半的转让费（「半价转让费」）。转让完成后，受让方承继您在该授权下的权利与义务；您转让后在该授权范围内不再享有使用权与二次开发权，除非您另行获得授权。具体转让流程、受让主体资格及费用以授权官网公示为准。
+
+5.3 Right to transfer the license: During the term of the commercial license, you may transfer the licensed rights (e.g., right of use, right of secondary development) in whole to a transferee that meets Youyacao’s requirements. Upon transfer, the transferee must pay Youyacao a transfer fee equal to half of the then-current standard commercial license fee ("half-price transfer fee"). After the transfer, the transferee assumes your rights and obligations under that license; you no longer retain the right of use or secondary development under that license unless you obtain a new license. Transfer procedures, transferee eligibility, and fees are as published on the License Site.
+
+5.4 所有权：在您合法使用、二次开发所形成的自有内容（如您独立编写的模块、您创作的内容、您拥有的数据）归您所有；优雅草产品本身的著作权、商标权及本协议项下授权解释权仍归优雅草所有。
+
+5.4 Ownership: Content that you create through lawful use and secondary development (e.g., your own modules, your content, your data) belongs to you; the copyright, trademark, and right to interpret this agreement with respect to Youyacao products remain with Youyacao.
+
+================================================================================
+六、禁止行为 / PROHIBITED CONDUCT
+================================================================================
+
+6.1 未经商业授权，不得将优雅草任何产品用于任何形式的商业用途（包括但不限于销售、出租、运营、集成进收费产品、以营利为目的的分发或再许可）。
+
+6.1 Without a commercial license, you may not use any Youyacao product for any form of commercial use (including but not limited to sale, rental, operation, integration into paid products, or distribution or sublicensing for profit).
+
+6.2 禁止在优雅草产品或其二次开发版本基础上，进行「衍生子版本」的开发、包装、命名或售卖。包括但不限于：以本产品为基础开发衍生版本、修改版本或第三方发行版并对外销售或再授权；以子版本、分支版本、定制版等名义进行单独定价销售；使第三方误认为该衍生品为独立于优雅草的其它产品等。前述行为无论是否保留优雅草标识，均视为违反本协议，优雅草有权终止授权并追究法律责任。
+
+6.2 You may not develop, package, name, or sell "derivative sub-versions" based on Youyacao products or your secondary development thereof. This includes but is not limited to: developing derivative, modified, or third-party distribution versions based on the product for sale or sublicensing; selling under the name of sub-version, branch version, custom version, etc.; or causing third parties to believe that such derivative is a product independent of Youyacao. Such conduct, whether or not Youyacao attribution is retained, is a breach of this agreement; Youyacao may terminate the license and pursue legal remedies.
+
+6.3 禁止移除、篡改、遮挡授权官网链接、版权声明及授权验证相关标识；禁止对授权查询机制进行规避或破解。
+
+6.3 You may not remove, alter, or obscure the License Site link, copyright notices, or license verification identifiers; you may not circumvent or crack any license verification mechanism.
+
+6.4 禁止将本协议或授权官网未明确许可的权利再许可、转授或以其他方式授予第三方（转让授权依第五条第 5.3 款办理的除外）。
+
+6.4 You may not sublicense, transfer, or otherwise grant to third parties any rights not expressly permitted in this agreement or on the License Site (except for license transfer under Section 5.3).
+
+================================================================================
+七、免责与担保限制 / DISCLAIMER AND LIMITATION OF WARRANTY
+================================================================================
+
+7.1 优雅草产品按「现状」提供，在法律允许的范围内，优雅草不提供任何明示或默示的保证（包括但不限于适销性、特定用途适用性、不侵权）。您使用本软件的风险由您自行承担。
+
+7.1 Youyacao products are provided "as is." To the extent permitted by law, Youyacao makes no express or implied warranties (including but not limited to merchantability or fitness for a particular purpose). You use the software at your own risk.
+
+7.2 除授权官网或书面协议另有约定外，优雅草不承诺对免费非商业用户提供技术支持；对商业授权用户的技术支持范围以授权官网或购买时约定为准。
+
+7.2 Unless otherwise agreed on the License Site or in writing, Youyacao does not promise technical support to free non-commercial users; the scope of support for commercial licensees is as stated on the License Site or at the time of purchase.
+
+7.3 本协议以电子文本形式呈现，与双方书面签署具有同等法律效力。您下载、安装、使用或获得商业授权即视为已阅读、理解并接受本协议全部条款。
+
+7.3 This agreement in electronic form has the same legal effect as a written signature. By downloading, installing, using, or obtaining a commercial license, you are deemed to have read, understood, and accepted all terms of this agreement.
+
+================================================================================
+八、协议变更与解释 / AMENDMENTS AND INTERPRETATION
+================================================================================
+
+8.1 优雅草有权在授权官网发布本协议的修订版本；新版本发布后，新获取的授权及新下载或新使用的产品以新版本为准。既有授权在无特别说明的情况下继续受原接受时的协议版本约束，但优雅草可要求以新版本替代时，以官网公告为准。
+
+8.1 Youyacao may publish revised versions of this agreement on the License Site. After publication, new licenses and new downloads or uses are governed by the new version. Existing licenses remain subject to the version in effect at the time of acceptance unless otherwise stated; if Youyacao requires migration to a new version, the official announcement on the License Site shall apply.
+
+8.2 本协议的解释权归成都市一颗优雅草科技有限公司所有。授权官网：https://zhengban.youyacao.com ；公司官网：https://www.youyacao.com 。
+
+8.2 Chengdu Yike Youyacao Technology Co., Ltd. reserves the right to interpret this agreement. License Site: https://zhengban.youyacao.com ; Company site: https://www.youyacao.com .
+
+================================================================================
+
+成都市一颗优雅草科技有限公司
+Chengdu Yike Youyacao Technology Co., Ltd.
+
+2026 年 2 月 17 日发布 / Published February 17, 2026
