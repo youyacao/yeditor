@@ -20,14 +20,29 @@
 
 ## 简介
 
-**优雅草 HTML 编辑器**（简称 **yeditor**）是成都市一颗优雅草科技有限公司面向 Web 推出的开源富文本编辑器。采用纯 JavaScript + CSS 实现，无第三方依赖，界面简洁大方，兼容主流浏览器，适合嵌入博客、后台、文档等各类 Web 应用。
+**优雅草 HTML 编辑器**（简称 **yeditor**）是成都市一颗优雅草科技有限公司面向 Web 推出的开源富文本编辑器。采用**纯 JavaScript + CSS** 实现，**无任何第三方依赖**，界面简洁大方，兼容主流浏览器，适合嵌入博客、后台、文档等各类 Web 应用。
 
-yeditor 为本公司**自用产品**，在内部项目中持续使用与迭代，**未来也会长期更新维护**。我们欢迎广大开发者使用、集成与二次开发，如有问题或建议，欢迎通过 Gitee Issue 或交流群反馈。
+yeditor 为本公司**自用产品**，在内部项目中持续使用与迭代，**未来每项产品都将内置使用**，并会长期更新维护。我们欢迎广大开发者使用、集成与二次开发，是否选用见仁见智，愿意用就用即可。如有问题或建议，欢迎通过 Gitee Issue 或交流群反馈。
 
-- **官网与在线演示**： [yeditor.youyacao.com](https://yeditor.youyacao.com) 或打开项目根目录下的 `index.html`
+**快速链接：**
+
+- **官网与在线演示**：[yeditor.youyacao.com](https://yeditor.youyacao.com) 或打开项目根目录下的 `index.html`
+- **优雅草科技官网**：[www.youyacao.com](https://www.youyacao.com)
 - **技术接口文档**：`api.html` — 各语言/框架（HTML、Vue、React、PHP、jQuery、Angular 等）接入说明
 - **关于 yeditor**：`about.html` — 产品简介与开发背景
 - **开源地址**：[https://gitee.com/youyacao/yeditor](https://gitee.com/youyacao/yeditor)
+- **正版授权中心**：[zhengban.youyacao.com](https://zhengban.youyacao.com) — 商业授权 29 元/永久，可永久查询
+
+**当前版本**：v1.0.0（2026 年 2 月 24 日首次发布），详见下方 [更新日志](#更新日志)。
+
+---
+
+## 为什么选择 yeditor（产品优势）
+
+- **极简轻量**：市面上不少富文本编辑器过于臃肿，需要引入大量第三方依赖、构建工具或运行时，集成与维护成本高。yeditor 仅需引入 `yeditor.js` 与 `yeditor.css` 两个文件即可使用，无需打包、无需框架绑定，开箱即用。
+- **零依赖**：不依赖 jQuery、Vue、React 等任何库，纯原生实现，适合任何技术栈的 Web 项目。
+- **易集成**：单文件引入，一个挂载节点 + 一行初始化代码即可接入，支持按需配置工具栏。
+- **长期维护**：优雅草科技自有项目全面采用，会持续迭代与修复，开源免费可商用；商业授权 29 元/永久，可在正版授权中心永久查询。
 
 ---
 
@@ -48,13 +63,21 @@ yeditor 为本公司**自用产品**，在内部项目中持续使用与迭代�
 
 以下为 yeditor 在浏览器中的实际使用效果。
 
-| 截图一 | 截图二 |
-|--------|--------|
-| ![yeditor 截图一](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=f4b170752c0d7acf67c1dde506ba34c1) | ![yeditor 截图二](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=febc43aaa8e04fdadf82d0d354652538) |
+**截图一**
 
-| 截图三 | 截图四 |
-|--------|--------|
-| ![yeditor 截图三](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=9b9b53bfac5db2b7ac018daf5e2f43d0) | ![yeditor 截图四](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=5f49c5ae23deb334ef738399bda233fd) |
+![yeditor 截图一](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=f4b170752c0d7acf67c1dde506ba34c1)
+
+**截图二**
+
+![yeditor 截图二](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=febc43aaa8e04fdadf82d0d354652538)
+
+**截图三**
+
+![yeditor 截图三](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=9b9b53bfac5db2b7ac018daf5e2f43d0)
+
+**截图四**
+
+![yeditor 截图四](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=5f49c5ae23deb334ef738399bda233fd)
 
 ---
 
@@ -222,6 +245,46 @@ yeditor/
 
 ---
 
+## 更新日志
+
+### 2026 年 2 月 24 日 — 首次发布（v1.0.0）
+
+本版本为 yeditor 第一次正式发布，完成以下基础能力：
+
+**核心与架构**
+
+- 发布编辑器核心 `yeditor.js`、`yeditor.css`，纯 JavaScript + CSS 实现，无第三方依赖
+- 支持通过 `new YEditor(selector, options)` 初始化，可选配置 `placeholder`、`minHeight`、`maxHeight`、`toolbar`
+- 提供完整 API：`getHTML()`、`setHTML(html)`、`getText()`、`focus()`、`destroy()`
+
+**编辑与排版**
+
+- 字体大小（12px～32px）、文字颜色（颜色选择器）
+- 粗体、斜体、下划线
+- 左对齐、居中、右对齐、两端对齐
+- 标题（h2、h3）、有序列表、无序列表
+
+**插入与源码**
+
+- 插入链接
+- 单张图片插入（支持远程 URL 与本地上传）
+- 多张图片一次插入（多 URL 或本地上传）
+- 源码模式：可切换查看与编辑 HTML 源码
+- 代码块支持
+
+**官网与文档**
+
+- 官网首页 `index.html`：产品介绍、在线演示、下载与开源入口
+- 技术接口文档 `api.html`：各语言/框架（HTML、Vue、React、PHP、jQuery、Angular 等）接入说明
+- 关于页 `about.html`：产品简介与开发背景
+
+**兼容与授权**
+
+- 兼容 Chrome、Firefox、Safari、Edge 等主流浏览器
+- 项目开源，可自由使用与二次开发；商业授权 29 元/永久，在 [zhengban.youyacao.com](https://zhengban.youyacao.com) 正版授权中心可永久查询
+
+---
+
 ## 正版授权
 
 如需**正版授权**与后续官方支持，可在**正版授权中心**获取：
@@ -235,7 +298,7 @@ yeditor/
 
 ## 开源与版权
 
-- **开源地址**：[https://gitee.com/youyacao/yeditor](https://gitee.com/youyacao/yeditor)  
+- **开源地址**：[Gitee](https://gitee.com/youyacao/yeditor) · [GitHub](https://github.com/youyacao/yeditor) · [GitCode](https://gitcode.com/youyacao/yeditor)  
 - **开发**：成都市一颗优雅草科技有限公司 · 卓伊凡  
 - 本项目开源，欢迎使用、学习与参与改进。
 
@@ -252,4 +315,7 @@ yeditor/
 
 ---
 
-**优雅草 HTML 编辑器 (yeditor)** — 简洁、大方、开源，长期更新，欢迎使用。
+**优雅草 HTML 编辑器 (yeditor)** — 轻量、简洁、开源，长期更新，欢迎使用。  
+© 成都市一颗优雅草科技有限公司 · 卓伊凡  
+
+**代码仓库**：[Gitee](https://gitee.com/youyacao/yeditor) · [GitHub](https://github.com/youyacao/yeditor) · [GitCode](https://gitcode.com/youyacao/yeditor)
